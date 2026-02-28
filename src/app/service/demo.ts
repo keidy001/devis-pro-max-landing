@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class Demo {
-    private apiUrl = '  https://2ad6-2a02-4780-28-b87c-00-1.ngrok-free.app';
+    private apiUrl = 'http://31.97.177.49:9093/api';
   //  private apiUrl = 'http://localhost:8081/api';
 
   constructor(private http: HttpClient) {}
