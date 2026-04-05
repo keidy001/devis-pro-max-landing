@@ -53,20 +53,22 @@ export class Inscription {
 
   submitForm() {
     if (this.demoForm.valid) {
-      this.isLoading = true;
-      let mdp = this.demoForm.value.password;
-      this.demoService.sendDemoRequest(this.demoForm.value).subscribe({
-        next: () => {
-          this.tostr.success('Inscription effectuée avec succès ');
-          this.successMessage = 'Votre mot de passe est : ' + mdp;
-          this.demoForm.reset();
-          this.isLoading = false;
-        },
-        error: (err) => {
-          this.isLoading = false;
-          this.tostr.error("Erreur lors de l'envoi.");
-        },
-      });
+
+
+      // this.isLoading = true;
+      // let mdp = this.demoForm.value.password;
+      // this.demoService.sendDemoRequest(this.demoForm.value).subscribe({
+      //   next: () => {
+      //     this.tostr.success('Inscription effectuée avec succès ');
+      //     this.successMessage = 'Votre mot de passe est : ' + mdp;
+      //     this.demoForm.reset();
+      //     this.isLoading = false;
+      //   },
+      //   error: (err) => {
+      //     this.isLoading = false;
+      //     this.tostr.error("Erreur lors de l'envoi.");
+      //   },
+      // });
     }
   }
 }
